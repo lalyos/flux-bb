@@ -19,6 +19,6 @@ spec:
     ingress:
       host: flux.u0.k8z.eu
     vars:
-      COLOR: hotpink
+      COLOR: yellow
       TITLE: flux
 
