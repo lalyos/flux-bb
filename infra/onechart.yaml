@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: onechart
+  namespace: user0
+spec:
+  interval: 1m0s
+  url: https://chart.onechart.dev
+
