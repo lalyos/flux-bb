@@ -1,0 +1,14 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: kustom
+  namespace: user0
+spec:
+  interval: 1m0s
+  path: ./infra
+  prune: false
+  sourceRef:
+    kind: GitRepository
+    name: infra
+
