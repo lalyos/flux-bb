@@ -1,0 +1,24 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: szerda
+  namespace: user0
+spec:
+  chart:
+    spec:
+      chart: onechart
+      sourceRef:
+        kind: HelmRepository
+        name: onechart
+  interval: 1m0s
+  values:
+    image:
+      repository: lalyos/12factor
+      tag: latest
+    ingress:
+      host: flux.u0.k8z.eu
+    vars:
+      COLOR: hotpink
+      TITLE: flux
+
